@@ -1,0 +1,9 @@
+{
+    "prefix": "%",
+    "data": {
+        "totalcmds": 0,
+        "totalmsgs": 0,
+        "firstcmd": "fws.reset"
+    },
+    "blacklist": []
+}

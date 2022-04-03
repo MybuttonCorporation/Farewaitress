@@ -1,0 +1,32 @@
+{
+    "prefix": "%",
+    "data": {
+        "totalcmds": 172,
+        "totalmsgs": 333,
+        "firstcmd": "fws.reset",
+        "version": "dev"
+    },
+    "blacklist": [],
+    "bans": [
+        "955477290987434004",
+        "917841473913888788",
+        "826471794473959505"
+    ],
+    "banreasons": {
+        "955477290987434004": {
+            "reason": "test reason",
+            "issuer": "FarewellNehir",
+            "name": "ScaweQ SuperVizör"
+        },
+        "917841473913888788": {
+            "reason": "banned for being inactive",
+            "issuer": "FarewellNehir",
+            "name": "Botlist.Testing"
+        },
+        "826471794473959505": {
+            "reason": "test reason",
+            "issuer": "FarewellNehir",
+            "name": "Cyber Bot Test"
+        }
+    }
+}
