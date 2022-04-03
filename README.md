@@ -1,11 +1,11 @@
 # Farewaitress Documentation
-###Install With git
+### Install With git
     
     ```bash
     git clone https://github.com/MybuttonCorporation/Farewaitress.git  
     npm install
     ```
-###Run
+### Run
     
     ```bash
     node index.js
