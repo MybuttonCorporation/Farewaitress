@@ -1,0 +1,10 @@
+{
+    "prefix": "%",
+    "data": {
+        "totalcmds": 10,
+        "totalmsgs": 10,
+        "version": "dev"
+    },
+    "blacklist": [],
+    "bans": []
+}

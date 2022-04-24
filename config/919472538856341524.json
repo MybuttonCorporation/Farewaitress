@@ -1,8 +1,8 @@
 {
     "prefix": "%",
     "data": {
-        "totalcmds": 172,
-        "totalmsgs": 333,
+        "totalcmds": 177,
+        "totalmsgs": 339,
         "firstcmd": "fws.reset",
         "version": "dev"
     },

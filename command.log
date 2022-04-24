@@ -3,3 +3,59 @@ server prefix & length: % | 1
 command: help
 arguements: 
 help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: server
+arguements: 
+help
+server prefix & length: % | 1
+command: server
+arguements: 
+info
+server prefix & length: % | 1
+arguements: 
+version
+command: server
+server prefix & length: % | 1
+arguements: 
+versions
+command: server
+server prefix & length: % | 1
+arguements: 
+version,dev
+command: server
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+admin/devmode
+server prefix & length: % | 1
+command: server
+arguements: 
+server
+server prefix & length: % | 1
+command: help
+arguements: 
+help

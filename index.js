@@ -13,10 +13,19 @@ const lastPartAfterSign = (str, separator='/') => {
     let result = str.substring(str.lastIndexOf(separator)+1)
     return result != str ? result : false
   }
-  
+  client.on('disconnect', () => {
+    console.log(chalk.red('»') + chalk.redBright(' Farewaitress Exited.'))
+    //create a {console} iterface
+    const request = require('./interface/console')
+    const val = new request(chalk.red('»') + chalk.redBright(' Restart? (y/n) ')).createInterface()
+    console.log(val)
+    client.destroy()
+})
   var commands = new Map()
   commands.set('help', {info: ' Gives information about the console.', name: 'help'})
   commands.set('echo', {info: ' Writes to the console with the first argument being the logger name.', name: 'echo'})
+  commands.set('bot', {info: ' Changes information about the bot.', name: 'bot'})
+  commands.set('quit', {info: ' Quits the process.', name: 'quit'})
   //outputs "1"
 log.push = function() { Array.prototype.push.apply(this, arguments);  consoleChanged();};
 function consoleChanged(createInterface = false, d = false) {
@@ -50,12 +59,20 @@ function consoleChanged(createInterface = false, d = false) {
 //import fs
 client.on('ready', async () => {
     if (client.user.username != config.activity.username) client.user.setUsername(config.activity.username)
-    client.user.setStatus("idle" /*config.activity.status retired due to not functioning*/)
-    client.user.setActivity(config.activity.presence.name.replace("$ping", 153), { type: config.activity.presence.type })
+    client.user.setPresence({
+        activity: {
+            name: config.activity.presence.name,
+            type: config.activity.presence.type,
+
+        },
+        status: config.activity.status
+    })
+
+    //client.user.setActivity(config.activity.presence.name.replace("$ping", 153), { type: config.activity.presence.type })
     console.log(`
-    *********************************************************
-    * [${client.user.username}] is now online.                         *
-    *********************************************************                                                           
+*********************************************************
+* [${client.user.username}] is now online.                         *
+*********************************************************                                                           
     `)
     consoleChanged(false, true)
     //const actiondata = await prompt(chalk.bold.red('[') + chalk.magentaBright('~\\') + chalk.yellow('Developer Console') +chalk.bold.red(']') + ' ' + chalk.bold.red('»') + ' ')
@@ -253,6 +270,18 @@ client.on("message", message => {
             if (hold.arrayHasValue("hold", message.author.id)) {
                 return message.reply(new discord.MessageEmbed({description: `> Your account is on hold for inspection.\n This is temporary, but if you were proven to be involved in actions that break our [terms of service](https://www.mybutton.org/docs/tos), you will be blacklisted.`, color: 'RED'}))
             }
+        }
+        //check if the value for devmode in config.json is true
+        
+        if (config.devmode == true) {
+        //return with an embed
+        message.channel.send(new discord.MessageEmbed({
+            description: `> The bot is under \`Maintenance\`.\n\n> If this has been going over for > 5 hours, please contact [\`[FarewellNehir]\`](https://www.mybutton.org/link/discord) for further assistance.`,
+
+            color: 'RED'
+
+        }))
+        return;
         }
     
 //check if the user is blacklisted
