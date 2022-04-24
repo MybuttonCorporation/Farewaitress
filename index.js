@@ -273,27 +273,28 @@ client.on("message", message => {
         }
         //check if the value for devmode in config.json is true
         
-        if (config.devmode == true) {
-        //return with an embed
-        message.channel.send(new discord.MessageEmbed({
-            description: `> The bot is under \`Maintenance\`.\n\n> If this has been going over for > 5 hours, please contact [\`[FarewellNehir]\`](https://www.mybutton.org/link/discord) for further assistance.`,
 
-            color: 'RED'
-
-        }))
-        return;
-        }
     
-//check if the user is blacklisted
+        //check if the user is blacklisted
         if (server.config.arrayHasValue("blacklist", message.author.id)) return message.reply(new discord.MessageEmbed({description: `> You are blacklisted from using Farewaitress in this server.`, color: 'RED'})) & console.log("user " + message.author.tag + "'s command was blocked because they were disallowed from using Farewaitress in the server.");
         if (cmd.version != undefined && !cmd.version.includes(server.config.get("data.version"))) {
             return message.reply(
               new discord.MessageEmbed({
-                description: `> This version of Farewaitress does not support ${cmd.name}.\nThe command you are trying to execute requires a version branch that's \`${cmd.version[0]}\` or higher, but this server is on branch \`${server.config.get("data.version")}\`.\nYou can update your server branch with \`${server.config.get("prefix")}server version ${cmd.version}\` to support this command.\n\`!\` Beware of the fact that version braches may be unstable, and may cause issues.`,
+                description: `> This version of Farewaitress does not support ${cmd.name}.\nThe command you are trying to execute requires a version branch that's \`${cmd.version[0]}\` or higher, but this server is on branch \`${server.config.get("data.version")}\`.\nYou can update your server branch with \`${server.config.get("prefix")}server version ${cmd.version[0]}\` to support this command.\n\`!\` Beware of the fact that version braches may be unstable, and may cause issues.`,
                 color: 'RED'
             })
             );
         }
+        if (config.devmode == true) {
+            //return with an embed
+            message.channel.send(new discord.MessageEmbed({
+                description: `> The bot is under \`Maintenance\`.\n\n> If this has been going over for > 5 hours, please contact [\`[FarewellNehir]\`](https://www.mybutton.org/link/discord) for further assistance.`,
+    
+                color: 'RED'
+    
+            }))
+            return;
+            }
         cmd.run(client, message, argsr, server.config);
     }
 }
