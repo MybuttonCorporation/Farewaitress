@@ -1,0 +1,72 @@
+{
+    "versions": {
+        "latest": "1.2-0.beta.1",
+        "latestdev": "1.2",
+        "latestbeta": "1.1.4-demo.1",
+        "currentStable": "1.1.4",
+        "depreciated": "1.1.3",
+        "developer_versions": [
+            {
+                "version": "0.1",
+                "description": "Command handling introduced",
+                "branch": "depreciated"
+            },
+            {
+                "version": "0.2",
+                "description": "Server configuration systems created",
+                "branch": "depreciated"
+            },
+            {
+                "version": "0.3",
+                "description": "Versions can now be set by server managers",
+                "branch": "depreciated"
+            },
+            {
+                "version": "1.0",
+                "description": "3 branches of versions were made, which are `latestStable`, `dev`, `beta`",
+                "branch": "depreciated"
+            },
+            {
+                "version": "1.1",
+                "description": "Added a terminate-account command for admins, also creating an admin command system",
+                "branch": "depreciated"
+            },
+            {
+                "version": "1.1.2",
+                "description": "Ability to view command information was added, also creating a system to backup system configurations",
+                "branch": "latest-depreciated"
+            },
+            {
+                "version": "1.1.3",
+                "description": "Added a system to inspect user accounts, putting them on hold.",
+                "branch": "stable, current"
+            },
+            {
+                "version": "1.1.4",
+                "description": "Developed a ban and kick system.",
+                "branch": "dev, latest"
+            },
+            {
+                "version": "1.2",
+                "description": "New commands added. '!help' to view them. ",
+                "branch": "dev, latest"
+            }
+        ],
+        "appreciated": [
+            "1.1.4-demo.1",
+            "1.1.4",
+            "1.2",
+            "1.2-0.beta.1"
+        ]
+    },
+    "token": "OTU2NjIwMTU2Nzg2ODY4MjI1.Yjy38g.wYx18Wdc5o7EEvdinMGna1K3DiA",
+    "activity": {
+        "username": "Farewaitress",
+        "status": "IDLE",
+        "presence": {
+            "name": "for commands.   @Farewaitress | %help",
+            "type": "WATCHING"
+        }
+    },
+    "devmode": true
+}

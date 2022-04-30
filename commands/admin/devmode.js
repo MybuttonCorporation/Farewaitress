@@ -7,10 +7,19 @@ module.exports = {
     async run (client, message, args, serverDatabase = null) {
         const db = require('wio.db').Database;
         const Database = new db("config/config.json");
-        var state = false; 
-        if (!Database.has("devmode")) Database.set("devmode", true); state = Database.get("devmode");
-        Database.set("devmode", state);
-        if (state) return message.reply(new discord.MessageEmbed({description: `> Maintenance mode \`enabled\`.`, color: 'red'}))
-        else return message.reply(new discord.MessageEmbed({description: `> Maintenance mode \`disabled\`.`, color: 'green'}))
-    }
+        if (!Database.has("devmode")) {
+            Database.set("devmode", true);
+            message.channel.send(new discord.MessageEmbed({description: `> Maintenance mode \`enabled\`.`, color: 'RED'}))
+            return
+        }
+        if (Database.get("devmode") == false) {
+            Database.set("devmode", true)
+            message.channel.send(new discord.MessageEmbed({description: `> Maintenance mode \`enabled\`.`, color: 'RED'}))
+        }
+        if (Database.get("devmode") == true) {
+            
+            message.channel.send(new discord.MessageEmbed({description: `> Maintenance mode \`disabled\`.`, color: 'GREEN'}))
+            Database.set("devmode", false)
+        }
+}
 }

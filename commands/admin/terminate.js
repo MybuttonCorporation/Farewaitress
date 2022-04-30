@@ -9,7 +9,7 @@ module.exports = {
         if (user.id == message.author.id) return message.reply(new discord.MessageEmbed({description: `> you cannot terminate yourself.`, color: 'RED'}))
         if (user.id == client.user.id) return message.reply(new discord.MessageEmbed({description: `> you cannot terminate the bot.`, color: 'RED'}))
         //check if the user defined a reason
-        if (!args[1]) return message.reply(new discord.MessageEmbed({description: `> the value \`string reason\` was not specified.`, color: 'RED'}))
+        if (!args[2]) return message.reply(new discord.MessageEmbed({description: `> the value \`string reason\` was not specified.`, color: 'RED'}))
         //terminate the user from all servers
         const guilds = client.guilds.cache.array()
         const db = require('wio.db')
@@ -22,7 +22,7 @@ module.exports = {
         if (Database.arrayHasValue("blacklist", user.id)) return message.reply(new discord.MessageEmbed({description: `> the user \`${user.tag}\` is already blacklisted.`, color: 'RED'}))
         
         Database.push("blacklist", user.id)
-        Database.set("reason_" + message.author.id, message.content.replace(`${serverDatabase.get("prefix")}admin/terminate ${args[0]}`, ""))
+        Database.set("reason_" + message.author.id, message.content.replace(`${serverDatabase.get("prefix")}admin/terminate ${args[1]}`, ""))
         //notify 
         message.channel.send(new discord.MessageEmbed({description: `> the user \`${user.tag}\` has been blacklisted.`, color: 'BLUE'}))
         //notify the user

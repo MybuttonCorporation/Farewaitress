@@ -286,14 +286,28 @@ client.on("message", message => {
             );
         }
         if (config.devmode == true) {
+            if (!(server.config.has("ADMIN_SERVER") && server.config.get("ADMIN_SERVER") == true) && !(message.author.id == "782616096146456597")) {
             //return with an embed
             message.channel.send(new discord.MessageEmbed({
-                description: `> The bot is under \`Maintenance\`.\n\n> If this has been going over for > 5 hours, please contact [\`[FarewellNehir]\`](https://www.mybutton.org/link/discord) for further assistance.`,
+                description: `> The bot is under \`Maintenance\`.\n\n> If this has been going over for \`> 5 hours\`, please contact [\`[FarewellNehir]\`](https://www.mybutton.org/link/discord) for further assistance.`,
     
                 color: 'RED'
     
             }))
             return;
+        }
+        
+        if (config.devmode == true) {
+            message.channel.send(new discord.MessageEmbed({
+                
+                description: `> __**! Warning**__\n\n> The bot is currently under \`Maintenance Mode\`. If you are done testing, please disable it with \`${server.config.get("prefix")}admin/devmode\`.\n> **THIS IS AN AUTOMATED MESSAGE; IT DOES NOT MEAN THAT THE CODE IS WRONG.**\n> But, making users wait is pretty annoying. So disable it if you can.`,
+                color: 'ORANGE',
+                footer: {
+                    text: "Automated-Warning-Message",//https://www.sex.com/pin/61985925-chikan-shita-sex-scenes/
+                    icon_url: client.user.displayAvatarURL()
+                }
+            }))
+        }
             }
         cmd.run(client, message, argsr, server.config);
     }

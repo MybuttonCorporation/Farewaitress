@@ -1,8 +1,8 @@
 {
     "prefix": "%",
     "data": {
-        "totalcmds": 10,
-        "totalmsgs": 10,
+        "totalcmds": 61,
+        "totalmsgs": 62,
         "version": "dev"
     },
     "blacklist": [],

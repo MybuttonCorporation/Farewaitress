@@ -59,3 +59,191 @@ server prefix & length: % | 1
 command: help
 arguements: 
 help
+server prefix & length: % | 1
+arguements: 
+hel,p
+command: hel,p
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: devmode
+arguements: 
+devmode
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+admin/devmode
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+admin/devmode
+command: admin/devmode
+server prefix & length: % | 1
+arguements: 
+admin/devmode
+command: admin/devmode
+server prefix & length: % | 1
+arguements: 
+admin/devmode
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+admin/devmode
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+admin/devmode
+server prefix & length: % | 1
+arguements: 
+admin/devmode
+command: admin/devmode
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+admin/devmode
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+admin/devmode
+server prefix & length: % | 1
+command: server
+arguements: 
+server
+server prefix & length: % | 1
+command: server
+arguements: 
+server
+server prefix & length: % | 1
+arguements: 
+help
+command: server
+server prefix & length: % | 1
+command: admin/modifyconfig
+arguements: 
+admin/modifyconfig
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+admin/devmode
+server prefix & length: % | 1
+command: admin/modifyconfig
+arguements: 
+admin/modifyconfig
+server prefix & length: % | 1
+command: admin/announce
+arguements: 
+admin/announce
+server prefix & length: % | 1
+command: admin/announce
+arguements: 
+admin/announce
+server prefix & length: % | 1
+command: admin/announce
+arguements: 
+admin/announce
+server prefix & length: % | 1
+command: admin/announce
+arguements: 
+test
+server prefix & length: % | 1
+command: admin/announce
+arguements: 
+test,lol
+server prefix & length: % | 1
+command: admin/modifyconfig
+arguements: 
+admin/modifyconfig
+server prefix & length: % | 1
+command: admin/modifyconfig
+arguements: 
+,796625201336811520
+server prefix & length: % | 1
+arguements: 
+796625201336811520
+command: admin/modifyconfig
+server prefix & length: % | 1
+command: admin/modifyconfig
+arguements: 
+796625201336811520
+server prefix & length: % | 1
+command: admin/modifyconfig
+arguements: 
+796625201336811520,test
+server prefix & length: % | 1
+command: admin/modifyconfig
+arguements: 
+796625201336811520,test,correct
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+admin/devmode
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+admin/devmode
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+command: help
+server prefix & length: % | 1
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+admin/devmode
+server prefix & length: % | 1
+command: admin/hep
+arguements: 
+admin/hep
+server prefix & length: % | 1
+command: help
+arguements: 
+help
+server prefix & length: % | 1
+command: admin
+arguements: 
+admin
+server prefix & length: % | 1
+command: server
+arguements: 
+server
+server prefix & length: % | 1
+command: server
+arguements: 
+server
