@@ -1,10 +1,13 @@
 {
     "prefix": "%",
     "data": {
-        "totalcmds": 61,
-        "totalmsgs": 62,
+        "totalcmds": 116,
+        "totalmsgs": 271,
         "version": "dev"
     },
-    "blacklist": [],
-    "bans": []
+    "blacklist": [
+        "965693913111334922"
+    ],
+    "bans": [],
+    "ADMIN_SERVER": "true"
 }

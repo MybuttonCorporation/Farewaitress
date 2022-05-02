@@ -2,8 +2,12 @@
   "dependencies": {
     "chalk": "^4.0.0",
     "discord.js": "^12.5.3",
+    "ffmpeg-static": "^5.0.0",
+    "opusscript": "^0.0.8",
     "prompt": "^1.2.2",
     "prompt-sync": "^4.2.0",
-    "wio.db": "^4.0.17"
+    "wio.db": "^4.0.17",
+    "yt-search": "^2.10.3",
+    "ytdl-core": "^4.11.0"
   }
 }

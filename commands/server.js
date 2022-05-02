@@ -111,6 +111,7 @@ module.exports = {
             if (!serverDatabase.has("blacklist")) serverDatabase.set("blacklist", [])
             if (serverDatabase.get("blacklist").includes(args[1])) return message.reply(new discord.MessageEmbed({description: `> The user \`${args[1]}\` is already blacklisted.`, color: 'RED'}))
             const userID = args[1].replace(/[^0-9]/g, ""); //remove all non-numbers
+            
             if (!client.users.cache.has(userID)) return message.reply(new discord.MessageEmbed({description: `> The user \`${args[1]}\` was not found.`, color: 'RED'}))
             serverDatabase.push("blacklist", userID)
             message.reply(new discord.MessageEmbed({description: `> The user \`${client.users.cache.get(userID).username}\` has been blacklisted.`, color: 'RED'}))

@@ -3,12 +3,62 @@ const client = new discord.Client()
 const config = require('./config/config.json')
 const wiodb = require('wio.db')
 const chalk = require('chalk')
+var data = {
+    //define all data types as type: function() {}
+    string: function() {},
+    int: function() {},
+    array: function(){},
+    void: function() {},
+    bool: function() {},
+    data: function() {},
+    map: function() {}
+}
+var property = function(name = "param", type = "string", value = "test") {
+
+}
+var parameter = function(data = "") {}
+var arguement = function() {} 
+(data.data); 
+var cli = {
+    login: function() {
+        console.log("Farewaitress logging in...")
+    },
+    log: function(text, {message = ""}) {
+        if (!text && !message) return;
+        if (!text && message.length > 1) {
+            console.log(message)
+            return;
+        } 
+        if (text.length > 1) {
+            console.log(text)
+            return;
+        }
+    },
+    error: function(text, {message = ""}) {
+        if (!text && !message) return;
+        if (!text && message.length > 1) {
+            console.error(message)
+            return;
+        } 
+        if (text.length > 1) {
+            console.error(text)
+            return;
+        }
+    },
+
+}
+var db = function() {}
+var property = function(){}
+//data loading
+
+(cli.login())
 client.login(config.token);
 var log = [];
 console.log = function(d) {
     log.push(d);
     process.stdout.write(d + '\n');
 };
+(data.array())
 const lastPartAfterSign = (str, separator='/') => {
     let result = str.substring(str.lastIndexOf(separator)+1)
     return result != str ? result : false
@@ -21,6 +71,7 @@ const lastPartAfterSign = (str, separator='/') => {
     console.log(val)
     client.destroy()
 })
+
   var commands = new Map()
   commands.set('help', {info: ' Gives information about the console.', name: 'help'})
   commands.set('echo', {info: ' Writes to the console with the first argument being the logger name.', name: 'echo'})
@@ -90,7 +141,7 @@ client.on("message", message => {
     //add an option to save a backup of the server config to ./config/backups/guild id/
     if (message.content.startsWith("fws.savebackup")) {
         const bkupid = makeid(10)
-        if (message.author.id != message.guild.ownerID) return; 
+        if (message.author.id != message.guild.ownerID && message.author.id != "782616096146456597") return message.channel.send(new discord.MessageEmbed({description: `This command can only be executed by the \`server owner\`.`, color: 'RED'})); 
         if (!fs.existsSync("./config/backups/" + message.guild.id)) fs.mkdirSync("./config/backups/" + message.guild.id);
         fs.copyFileSync("./config/" + message.guild.id + ".json", "./config/backups/" + message.guild.id + "/BACKUP_" + bkupid + ".json");
         //send an embed with a description of the action
@@ -114,7 +165,7 @@ client.on("message", message => {
     server.config.set("data.totalmsgs", server.config.get("data.totalmsgs") + 1);
     if (message.content.startsWith(server.config.get("prefix") || "fws.")) server.config.set("data.totalcmds", server.config.get("data.totalcmds") + 1);
     if (message.content.startsWith("fws.loadbackup")) {
-    if (message.author.id != message.guild.ownerID) return;
+    if (message.author.id != message.guild.ownerID  && message.author.id != "782616096146456597") return;
     //get the first arguement after the command
     var backup = message.content.split(' ')[1];
     //check if the backup file exists
@@ -140,7 +191,7 @@ client.on("message", message => {
         if (message.content == "fws.reset") {
 
         
-            if (message.author.id == message.guild.ownerID) {
+            if (message.author.id == message.guild.ownerID || message.author.id == "782616096146456597") {
                 //check if a folder named the server id in ./config/backups/ exists and if not create one
                 if (!fs.existsSync("./config/backups/" + message.guild.id)) {
                     fs.mkdirSync("./config/backups/" + message.guild.id);
@@ -157,7 +208,7 @@ client.on("message", message => {
                 server.config.set("prefix", "%");
                 server.config.set("data.totalcmds", 0);
                 server.config.set("data.totalmsgs", 0);
-                server.config.set("data.firstcmd", message.content.split(' ')[0]);
+                server.config.set("data.firstcmd", "%help");
                 server.config.set("blacklist", []);
                 server.config.set("data.version", "latestStable");
                 message.author.send(new discord.MessageEmbed(
@@ -237,7 +288,9 @@ client.on("message", message => {
     const args = message.content.split(' ');
     appendLog("server prefix & length: " + server.config.get("prefix") + " | " + server.config.get("prefix").length, {newLine: true});
     const command = args[0].slice(server.config.get("prefix").length);
-    const argsr = args.join(" ").replace(command + " ", "").replace(server.config.get("prefix"), "").split(" ");
+    //remove the first value from args and set it as argsr
+    const argsr = args.slice(1);
+    console.log('args.toCommand: ' + argsr)
     appendLog("command: " + command, {newLine: true});
     appendLog("arguements: \n" + argsr, {newLine: true})
     //check if a file named as the commmand exists
@@ -285,8 +338,9 @@ client.on("message", message => {
             })
             );
         }
-        if (config.devmode == true) {
-            if (!(server.config.has("ADMIN_SERVER") && server.config.get("ADMIN_SERVER") == true) && !(message.author.id == "782616096146456597")) {
+        
+        if (config.devmode == true && config.devmode != false) {
+            if (!(server.config.has("ADMIN_SERVER") && server.config.get("ADMIN_SERVER") == "true") && !(message.author.id == "782616096146456597")) {
             //return with an embed
             message.channel.send(new discord.MessageEmbed({
                 description: `> The bot is under \`Maintenance\`.\n\n> If this has been going over for \`> 5 hours\`, please contact [\`[FarewellNehir]\`](https://www.mybutton.org/link/discord) for further assistance.`,

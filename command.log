@@ -247,3 +247,211 @@ server prefix & length: % | 1
 command: server
 arguements: 
 server
+server prefix & length: % | 1
+command: server
+arguements: 
+version,beta
+server prefix & length: % | 1
+arguements: 
+help
+command: help
+server prefix & length: % | 1
+arguements: 
+admin/devmode
+command: admin/devmode
+server prefix & length: % | 1
+command: play
+arguements: 
+play
+server prefix & length: % | 1
+command: play
+arguements: 
+play
+server prefix & length: % | 1
+command: play
+arguements: 
+play
+server prefix & length: % | 1
+command: play
+arguements: 
+play
+server prefix & length: % | 1
+command: play
+arguements: 
+play
+server prefix & length: % | 1
+command: play
+arguements: 
+play
+server prefix & length: % | 1
+command: play
+arguements: 
+play
+server prefix & length: % | 1
+command: play
+arguements: 
+%play
+server prefix & length: % | 1
+command: play
+arguements: 
+
+server prefix & length: % | 1
+command: play
+arguements: 
+help
+server prefix & length: % | 1
+command: play
+arguements: 
+dancing,<loop:true>,queen
+server prefix & length: % | 1
+command: play
+arguements: 
+dancing,<loop:true>,queen
+server prefix & length: % | 1
+command: play
+arguements: 
+dancing,#loop:true,queen
+server prefix & length: % | 1
+command: play
+arguements: 
+dancing,queen
+server prefix & length: % | 1
+command: play
+arguements: 
+dancing,queen
+server prefix & length: % | 1
+command: play
+arguements: 
+Op,25,No,12,(Ocean),etude
+server prefix & length: % | 1
+command: play
+arguements: 
+Chopin,ocean,etude,${loop:true}
+server prefix & length: % | 1
+command: play
+arguements: 
+Chopin,etude,$loop:true
+command: play
+server prefix & length: % | 1
+arguements: 
+Chopin,ocean,etude
+server prefix & length: % | 1
+command: play
+arguements: 
+chopin,ocean,etude,<loop:true>
+server prefix & length: % | 1
+command: play
+arguements: 
+chopin,butterfly,etude,<loop:true>
+server prefix & length: % | 1
+command: play
+arguements: 
+chopin,butterfly,etude,$loop:true
+server prefix & length: % | 1
+arguements: 
+chopin,butterfly,etude,$loop:true
+command: play
+server prefix & length: % | 1
+arguements: 
+liszt,grand,gallop,chromatique,opus,25
+command: play
+server prefix & length: % | 1
+arguements: 
+chopin,wrong,note,,rousseau
+command: play
+server prefix & length: % | 1
+arguements: 
+liszt,hungarian,rhapsody,no,6,rousseau
+command: play
+server prefix & length: % | 1
+command: play
+arguements: 
+liszt,hungarian,rhapsody,no,6,rousseau,<loop:true>
+server prefix & length: % | 1
+command: leave
+arguements: 
+
+server prefix & length: % | 1
+command: leave
+arguements: 
+
+server prefix & length: % | 1
+command: leave
+arguements: 
+
+server prefix & length: % | 1
+command: info
+arguements: 
+
+server prefix & length: % | 1
+command: help
+arguements: 
+
+server prefix & length: % | 1
+command: help
+arguements: 
+
+server prefix & length: % | 1
+command: server
+arguements: 
+info
+server prefix & length: % | 1
+command: server
+arguements: 
+version,dev
+server prefix & length: % | 1
+command: modifyconfig
+arguements: 
+
+server prefix & length: % | 1
+command: modifyconfig
+arguements: 
+
+server prefix & length: % | 1
+command: admin/modifyconfig
+arguements: 
+
+server prefix & length: % | 1
+arguements: 
+796625201336811520,ADMIN_SERVER,true
+command: admin/modifyconfig
+server prefix & length: % | 1
+command: admin/devmode
+arguements: 
+
+server prefix & length: % | 1
+arguements: 
+
+command: help
+server prefix & length: % | 1
+command: admin
+arguements: 
+
+server prefix & length: % | 1
+command: server
+arguements: 
+
+server prefix & length: % | 1
+command: server
+arguements: 
+help
+server prefix & length: % | 1
+arguements: 
+blacklist,<@965693913111334922>
+command: server
+server prefix & length: % | 1
+command: server
+arguements: 
+info
+server prefix & length: % | 1
+command: server
+arguements: 
+blacklist,<@965693913111334922>
+server prefix & length: % | 1
+arguements: 
+info
+command: server
+server prefix & length: % | 1
+command: server
+arguements: 
+info,data
